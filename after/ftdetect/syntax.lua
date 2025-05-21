@@ -9,6 +9,6 @@ vim.filetype.add({
   -- },
   pattern = {
     [".*/.local/share/chezmoi/.*/.chezmoiexternals/.*"] = "toml",
-    [".*/.config/environment.d/.*"] = "systemd",
+    [".*/.config/environment.*"] = "systemd",
   },
 })
