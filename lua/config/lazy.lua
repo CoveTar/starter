@@ -8,7 +8,17 @@ require("lazy").setup({
       import = "lazyvim.plugins",
       opts = {
         colorscheme = function()
-          require("tinted-colorscheme").setup(nil, {})
+          if vim.fn.executable("tinty") == 1 then
+            require("tinted-colorscheme").setup(nil, {})
+          else
+            -- Fallback if Tinty or anything else fails
+            require("tinted-colorscheme").setup("base16-equilibrium-dark", {
+              supports = {
+                live_reload = false,
+                tinty = false,
+              },
+            })
+          end
         end,
       },
     },
