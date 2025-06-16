@@ -11,7 +11,7 @@ require("lazy").setup({
           if vim.fn.executable("tinty") == 1 then
             require("tinted-colorscheme").setup(nil, {})
           else
-            -- Fallback if Tinty or anything else fails
+            -- Fallback if Tinty
             require("tinted-colorscheme").setup("base16-equilibrium-dark", {
               supports = {
                 live_reload = false,
