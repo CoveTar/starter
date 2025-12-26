@@ -11,5 +11,7 @@ vim.filetype.add({
     [".*/.local/share/chezmoi/.*/.chezmoiexternals/.*"] = "toml",
     [".*/.local/share/chezmoi/.*/.chezmoiignore"] = "chezmoitmpl",
     [".*/.config/environment.*"] = "systemd",
+    [".*/roles/.*/meta/.*%.ya?ml"] = "yaml.ansible",
+    [".*/roles/.*/vars/.*%.ya?ml"] = "yaml.ansible",
   },
 })
