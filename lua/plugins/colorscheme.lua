@@ -1,9 +1,9 @@
 return {
-  -- Add base16-nvim plugin
-  -- {
-  --   "RRethy/base16-nvim",
-  --   lazy = true, -- Lazy load the plugin
-  -- },
-  { "tinted-theming/tinted-nvim" },
-  -- Configure LazyVim to use the equilibrium-dark colorscheme
+  "tinted-theming/tinted-nvim",
+  priority = 1000, -- load colorscheme early
+  lazy = false, -- apply on startup
+  opts = {
+    default_scheme = "base16-equilibrium-dark", -- pick any bundled Base16/Base24
+    -- compile = true, -- optional: precompile for faster startup
+  },
 }

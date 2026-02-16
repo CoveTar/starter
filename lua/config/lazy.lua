@@ -6,21 +6,7 @@ require("lazy").setup({
     {
       "LazyVim/LazyVim",
       import = "lazyvim.plugins",
-      opts = {
-        colorscheme = function()
-          if vim.fn.executable("tinty") == 1 then
-            require("tinted-colorscheme").setup(nil, {})
-          else
-            -- Fallback if Tinty
-            require("tinted-colorscheme").setup("base16-equilibrium-dark", {
-              supports = {
-                live_reload = false,
-                tinty = false,
-              },
-            })
-          end
-        end,
-      },
+      opts = {},
     },
     -- import/override with your plugins
     {
